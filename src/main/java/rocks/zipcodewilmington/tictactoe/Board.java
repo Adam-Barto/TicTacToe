@@ -11,11 +11,11 @@ public class Board {
     }
 
     public Boolean isInFavorOfX() {
-        return (getCount('X')=='X');
+        return (IsItWinning('X')=='X');
     }
 
     public Boolean isInFavorOfO() {
-        return (getCount('O')=='O');
+        return (IsItWinning('O')=='O');
     }
 
     public Boolean isTie() {
@@ -31,8 +31,7 @@ public class Board {
             return "";
         }
     }
-    public char getCount(char c) {
-        StringBuilder list = new StringBuilder();
+    public char IsItWinning(char c) {
         boolean win = false;
         for (int y = 0; y < game.length; y++) {
             if (game[y][y] != c) {
